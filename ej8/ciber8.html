@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JavaScript Basic</title>
+  <script>
+    // EJERCICIO 8
+    do {
+      operador = prompt("¿Quieres hacer una suma, una resta o una multiplicación?");
+      valor1 = prompt("Dime cual es el valor del primer número:");
+      valor2 = prompt("Dime cual es el valor del segundo número:");
+      /* console.log(operador, valor1, valor2); */
+
+      if (isNaN(operador) && !isNaN(valor1) && !isNaN(valor2)) {
+        function calculadora(operador, valor1, valor2) {
+
+          if (operador == "suma") {
+            var resultado = valor1 + valor2;
+            alert("El resultado de la suma es " + resultado);
+          } else if (operador == "resta") {
+            var resultado = valor1 - valor2;
+            alert("El resultado de la resta es " + resultado);
+          } else if (operador == "multiplicación" || operador == "multiplicacion") {
+            var resultado = valor1 * valor2;
+            alert("El resultado de la multiplicación es " + resultado);
+          }
+          operar = prompt("Si quieres hacer otra operación escribe si");
+        }
+      } else {
+        alert("Introduce un valor válido");
+        operador = prompt("¿Quieres hacer una suma, una resta o una multiplicación?");
+        valor1 = prompt("Dime cual es el valor del primer número:");
+        valor2 = prompt("Dime cual es el valor del segundo número:");
+        operar == "si";
+      }
+
+      /* console.log(isNaN(operador), !isNaN(valor1), !isNaN(valor2)); */
+
+      calculadora(operador.toLowerCase(), parseInt(valor1), parseInt(valor2));
+
+    } while (operar == "si" || operar == "SI");
+
+    alert("¡Hasta otra!");
+  </script>
+</head>
+
+<body></body>
+
+</html>
